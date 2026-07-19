@@ -64,13 +64,38 @@
       margin-bottom: 18px;
     }
 
-    .eyebrow {
+    .school-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .school-mark {
+      display: grid;
+      flex: 0 0 46px;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      border: 2px solid var(--orange);
+      border-radius: 50%;
+      color: var(--orange-light);
+      box-shadow: inset 0 0 0 5px rgb(255 122 26 / 12%);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .school-name {
       margin: 0 0 2px;
       color: var(--orange-light);
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       font-weight: 800;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     h1 {
@@ -377,6 +402,21 @@
         gap: 7px;
       }
 
+      .school-brand {
+        gap: 9px;
+      }
+
+      .school-mark {
+        flex-basis: 40px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .school-name {
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+      }
+
       .status-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -423,9 +463,12 @@
 <body>
   <main class="game-shell" aria-labelledby="gameTitle" inert>
     <header class="game-header">
-      <div>
-        <p class="eyebrow">街头挑战</p>
-        <h1 id="gameTitle">压哨投篮</h1>
+      <div class="school-brand">
+        <span class="school-mark" aria-hidden="true">FZ</span>
+        <div class="brand-copy">
+          <p class="school-name">福州软件职业学院</p>
+          <h1 id="gameTitle">压哨投篮</h1>
+        </div>
       </div>
       <p class="round-rule">每关 10 次机会，获得 60 分即可晋级</p>
     </header>

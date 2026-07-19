@@ -1,0 +1,57 @@
+<style>
+  .brand-preview { background:#090a0d; border:1px solid #343844; border-radius:14px; padding:18px; color:#f7f8fa; font-family:"Microsoft YaHei",system-ui,sans-serif; min-height:150px; }
+  .brand-header { display:flex; align-items:flex-end; justify-content:space-between; gap:18px; }
+  .school-lockup { display:flex; align-items:center; gap:10px; }
+  .school-mark { width:42px; height:42px; flex:0 0 auto; display:grid; place-items:center; border:2px solid #ff7a1a; border-radius:50%; color:#ffad5c; font-size:12px; font-weight:900; letter-spacing:-.04em; box-shadow:inset 0 0 0 4px rgb(255 122 26 / 12%); }
+  .school-name { color:#ffad5c; font-size:12px; font-weight:800; letter-spacing:.08em; }
+  .game-name { margin-top:2px; font-size:27px; font-weight:900; letter-spacing:-.04em; }
+  .rule { color:#b9bec9; font-size:12px; text-align:right; }
+  .plaque { padding:8px 12px; border-left:3px solid #ff7a1a; border-radius:4px; background:#15171d; color:#ffad5c; font-size:12px; font-weight:800; }
+  .brand-strip { display:flex; align-items:center; gap:10px; margin:-18px -18px 18px; padding:9px 18px; border-bottom:1px solid #343844; border-radius:14px 14px 0 0; background:#15171d; color:#ffad5c; font-size:12px; font-weight:800; letter-spacing:.08em; }
+  .mini-mark { width:24px; height:24px; display:grid; place-items:center; border:1px solid #ff7a1a; border-radius:50%; font-size:8px; }
+</style>
+
+<h2>主标题栏校名标识方案</h2>
+<p class="subtitle">均使用纯文字与原创几何徽记，不冒充学校官方校徽。请选择更符合你预期的一种。</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="brand-preview">
+        <div class="brand-header">
+          <div class="school-lockup">
+            <div class="school-mark">FZ</div>
+            <div><div class="school-name">福州软件职业学院</div><div class="game-name">压哨投篮</div></div>
+          </div>
+          <div class="rule">每关 10 次机会<br>获得 60 分即可晋级</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body"><h3>A · 联合标识（推荐）</h3><p>校名与原创 FZ 圆形徽记组成一体，辨识度最高，同时保留游戏标题。</p></div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="brand-preview">
+        <div class="brand-header">
+          <div><div style="color:#ffad5c;font-size:12px;font-weight:800;letter-spacing:.2em">街头挑战</div><div class="game-name">压哨投篮</div></div>
+          <div><div class="plaque">福州软件职业学院</div><div class="rule" style="margin-top:8px">每关 10 次机会，60 分晋级</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body"><h3>B · 右侧铭牌</h3><p>学校标识位于标题栏右侧，改动最少，整体更克制正式。</p></div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="brand-preview">
+        <div class="brand-strip"><span class="mini-mark">FZ</span>福州软件职业学院</div>
+        <div class="brand-header">
+          <div><div style="color:#ffad5c;font-size:12px;font-weight:800;letter-spacing:.2em">街头挑战</div><div class="game-name">压哨投篮</div></div>
+          <div class="rule">每关 10 次机会<br>获得 60 分即可晋级</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body"><h3>C · 顶部品牌条</h3><p>校名独占一条品牌区域，最醒目，但会增加标题栏高度。</p></div>
+  </div>
+</div>

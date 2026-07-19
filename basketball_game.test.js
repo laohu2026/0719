@@ -109,6 +109,17 @@ test('页面提供完整中文游戏界面所需的静态元素', () => {
   }
 });
 
+test('主标题栏展示学校联合标识并保持无障碍语义', () => {
+  const html = loadHtml();
+  const schoolMark = html.match(/<[^>]+\bclass=["'][^"']*\bschool-mark\b[^"']*["'][^>]*>/i)?.[0] || '';
+
+  assert.match(html, /<[^>]+\bclass=["'][^"']*\bschool-name\b[^"']*["'][^>]*>\s*福州软件职业学院\s*<\/[^>]+>/i);
+  assert.match(schoolMark, /\baria-hidden=["']true["']/i);
+  assert.match(html, /\.school-brand\s*\{/i);
+  assert.match(html, /\.school-mark\s*\{/i);
+  assert.match(html, /@media\s*\([^)]*max-width\s*:\s*640px[^)]*\)[\s\S]*?\.school-mark\s*\{/i);
+});
+
 test('关键交互元素具备无障碍语义与中文 Canvas 降级内容', () => {
   const html = loadHtml();
   const shootButton = openingTagForId(html, 'shootButton');
