@@ -1,0 +1,47 @@
+<style>
+  .game-shell{max-width:980px;margin:0 auto;border-radius:24px;overflow:hidden;background:#0b1220;color:#f8fafc;box-shadow:0 24px 70px rgba(15,23,42,.3)}
+  .game-top{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px;background:#111827}
+  .stat{padding:12px;border:1px solid #334155;border-radius:14px;background:#172033;text-align:center}
+  .stat b{display:block;color:#fb923c;font-size:24px}.stat span{font-size:12px;color:#cbd5e1}
+  .court{position:relative;height:330px;overflow:hidden;background:linear-gradient(#173c69 0 56%,#c66a2b 56% 100%)}
+  .court:after{content:"";position:absolute;left:0;right:0;bottom:42px;height:4px;background:rgba(255,255,255,.4);transform:skewY(-7deg)}
+  .backboard{position:absolute;right:14%;top:42px;width:12px;height:125px;background:#e2e8f0;box-shadow:0 0 0 3px #64748b}
+  .rim{position:absolute;right:7%;top:135px;width:92px;height:9px;background:#f97316;border-radius:99px}
+  .net{position:absolute;right:8%;top:144px;width:72px;height:72px;border:3px solid rgba(255,255,255,.8);border-top:0;clip-path:polygon(0 0,100% 0,76% 100%,24% 100%)}
+  .ball{position:absolute;left:16%;bottom:54px;width:58px;height:58px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fdba74,#ea580c 62%,#9a3412);border:3px solid #431407;box-shadow:0 10px 22px rgba(0,0,0,.35)}
+  .ball:before,.ball:after{content:"";position:absolute;background:#431407}.ball:before{left:26px;top:0;width:3px;height:100%}.ball:after{left:0;top:26px;width:100%;height:3px}
+  .controls{padding:18px 22px 22px;background:#111827}
+  .timer-row{display:flex;justify-content:space-between;margin-bottom:8px;color:#cbd5e1;font-size:14px}
+  .meter{position:relative;height:22px;border-radius:99px;background:#334155;overflow:hidden;border:2px solid #475569}
+  .zone{position:absolute;left:43%;width:16%;height:100%;background:#22c55e;box-shadow:0 0 18px rgba(34,197,94,.7)}
+  .needle{position:absolute;left:51%;width:5px;height:100%;background:#fff;box-shadow:0 0 8px #fff}
+  .shoot{display:block;width:100%;min-height:52px;margin-top:14px;border:0;border-radius:14px;background:#f97316;color:#fff;font-size:18px;font-weight:800;box-shadow:0 8px 20px rgba(249,115,22,.25)}
+  .hint{text-align:center;color:#94a3b8;font-size:13px;margin-top:10px}
+  @media(max-width:650px){.game-top{grid-template-columns:repeat(2,1fr)}.court{height:280px}.backboard{right:10%}.rim{right:1%}}
+</style>
+
+<h2>设计第 2 部分：主游戏界面</h2>
+<p class="subtitle">深色街头篮球风格，橙色强调操作，信息集中且支持手机布局。</p>
+
+<div class="game-shell">
+  <div class="game-top">
+    <div class="stat"><b>03 / 10</b><span>当前关卡</span></div>
+    <div class="stat"><b>40</b><span>本关得分</span></div>
+    <div class="stat"><b>6</b><span>剩余投篮</span></div>
+    <div class="stat"><b>3.6s</b><span>每球限时</span></div>
+  </div>
+  <div class="court" aria-label="篮球场、篮球与篮筐的游戏画面">
+    <div class="backboard"></div><div class="rim"></div><div class="net"></div><div class="ball"></div>
+  </div>
+  <div class="controls">
+    <div class="timer-row"><span>把握最佳时机</span><strong>剩余 2.8 秒</strong></div>
+    <div class="meter"><div class="zone"></div><div class="needle"></div></div>
+    <button class="shoot">投篮</button>
+    <div class="hint">点击按钮或按空格键投篮</div>
+  </div>
+</div>
+
+<div class="pros-cons" style="margin-top:22px">
+  <div class="pros"><h4>设计重点</h4><ul><li>状态信息始终可见</li><li>投篮按钮满足触控尺寸</li><li>命中区不只依赖颜色，还会显示“最佳”文字</li></ul></div>
+  <div class="cons"><h4>克制原则</h4><ul><li>不加载外部图片或框架</li><li>不加入商城、排行榜等额外功能</li><li>减少影响操作判断的装饰动画</li></ul></div>
+</div>

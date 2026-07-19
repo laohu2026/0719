@@ -1,0 +1,44 @@
+<h2>选择投篮操作方式</h2>
+<p class="subtitle">每次投篮都需要玩家主动操作；请选择你更喜欢的玩法。</p>
+
+<div class="cards">
+  <div class="card" data-choice="timing" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:22px;background:linear-gradient(135deg,#111827,#1f2937);color:#fff;text-align:center;min-height:150px;">
+      <div style="font-size:44px;margin-bottom:14px;">🏀</div>
+      <div style="height:16px;border-radius:99px;background:#374151;overflow:hidden;position:relative;">
+        <div style="position:absolute;left:42%;width:18%;height:100%;background:#22c55e;"></div>
+        <div style="position:absolute;left:53%;width:4px;height:100%;background:#fff;"></div>
+      </div>
+      <div style="margin-top:14px;font-weight:700;">在绿色区域点击投篮</div>
+    </div>
+    <div class="card-body">
+      <h3>A．时机条</h3>
+      <p>指针来回移动，在命中区点击。每关指针加速，最符合“限时逐关加快”。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="aim" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:22px;background:linear-gradient(135deg,#0f172a,#334155);color:#fff;text-align:center;min-height:150px;">
+      <div style="font-size:50px;line-height:1;">🏀</div>
+      <div style="font-size:30px;line-height:1.2;color:#fb923c;">↗</div>
+      <div style="font-size:46px;line-height:1;">⊔</div>
+      <div style="margin-top:8px;font-weight:700;">拖动瞄准并松手投篮</div>
+    </div>
+    <div class="card-body">
+      <h3>B．拖拽瞄准</h3>
+      <p>拖动篮球控制方向和力度，操作更像真实投篮，但手机与鼠标适配更复杂。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="reaction" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:22px;background:linear-gradient(135deg,#431407,#7c2d12);color:#fff;text-align:center;min-height:150px;">
+      <div style="font-size:48px;margin-bottom:14px;">⏱️</div>
+      <button class="mock-button" style="background:#f97316;color:#fff;border:0;font-weight:800;">立即投篮</button>
+      <div style="margin-top:14px;font-weight:700;">倒计时结束前点击</div>
+    </div>
+    <div class="card-body">
+      <h3>C．反应点击</h3>
+      <p>在随机出现的投篮按钮消失前点击，规则最简单，但技巧性相对较弱。</p>
+    </div>
+  </div>
+</div>
